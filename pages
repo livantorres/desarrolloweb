@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Teoria De Grafos</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../GRAFOS/estilos.css">
+	<link rel="icon" type="icon" href="../GRAFOS/imagenes/icono.png">
+
+</head>
+
+<body>
+	<header>
+	<div id="logos">
+
+			<div class="logo-web">
+				<a href="inicio.html"><img src="../GRAFOS/imagenes/icono.png"></a>
+				<h1>  <span class="resaltado">Teoria </span> De Grafos </h1>
+			</div>
+				<div class="autor">
+				<a> Autor: Livan Torres Nuñez </a>
+			</div>	
+		</div>
+
+			
+	</header>
+
+	<nav class="navbar">
+
+			<ul class="menu">
+				<li class="menu-item">
+					<a id="inicio" href="inicio.html" class="menu-link">Inicio</a>
+				</li>
+				<li class="menu-item">
+					<a href="#" class="menu-link">Conceptos</a>
+					<ul class="submenu">
+						<li class="submenu-item">
+							<a href="concepto.html" class="submenu-link">Concepto General</a>
+						</li>
+					</ul>
+				</li>
+
+
+				<li class="menu-item">
+					<a href="" class="menu-link">Ejercicios</a>
+
+					<ul class="submenu">
+						<li class="submenu-item">
+							<a href="ejercicio1.html" class="submenu-link">Ejercicio 1</a>
+						</li>
+						<li class="submenu-item">
+							<a href="ejercicio2.html" class="submenu-link">Ejercicio 2</a>
+						</li>
+						<li class="submenu-item">
+							<a href="ejercicio3.html" class="submenu-link">Ejercicio 3</a>
+						</li>
+					</ul>
+				</li>
+
+
+				<li class="menu-item">
+					<a id="imagenes" href="imagenes.html" class="menu-link">Imagenes</a>
+				</li>	
+
+				<li class="menu-item">
+					<a id="contactenos" href="contactenos.html" class="menu-link">Contactenos</a>
+					
+				</li>
+			</ul>
+
+		</nav>
+
+
+		
+
+		<section>
+		<div class="wrapp">
+				<article>
+					<div class="mensaje">
+						<h2>Teoria De <span class="resaltado">Grafos</span></h2>
+					</div>
+
+						<p><img src="../GRAFOS/imagenes/icono.png">
+						</p><br/><br/>
+						<p>Bienvenidos a la pagina donde encontraran conceptos, ejercicios resueltos e imagenes de todo tipo de grafo.</p>
+						<br/><br/>
+						
+				</article>
+		</section>
+
+	<footer>
+				<p> <a target="_blank": href="../inicio.html" title="Nombre autor">Universidad De Córdoba <br> Montería - Córdoba</a></p>
+				<p>&copy;Derechos Reservados 2018</p>
+	</footer>
+
+
+</body>
+</html>
