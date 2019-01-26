@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UAES | Citas</title>
+	<link rel="icon" type="icon" href="img/logo.png">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+
+
+<?php
+$mensaje='';
+try{
+	$conexion = new PDO('mysql:host=localhost;dbname=uaes','root','');
+}catch(PDOException $e){
+	echo "Error: ". $e->getMessage();
+}
+
+$consulta = $conexion -> prepare("
+		SELECT * FROM citas 
+inner join usuario on usuario.iduser=citas.user
+inner join odontologia on odontologia.idodontologia=citas.odontologia_idodontologia
+; ");
+
+$consulta ->execute();
+$consulta = $consulta ->fetchAll();
+if(!$consulta){
+	$mensaje .= 'VACIO';
+}
+?>
+<?php include 'plantillas/header.php' ?>
+	<section class="main">
+		<div class="wrapp">
+			<?php include 'plantillas/nav.php' ?>
+				<article>
+					<div class="mensaje">
+						<h2>CITA ODONTOLOGICA</h2>
+					</div>
+					<a class="agregar" href="agregarcitasodontologicas.php">Programar una Cita Odontologica</a>
+					
+				
+						
+
+
+
+
+
+					<table class="tabla">
+						  <tr>
+							<th>Id</th>
+							<th>Estudiante</th>
+							<th>Doctor</th>
+							<th>Fecha</th>
+							<th>Hora</th>
+							
+							<th>Observaciones</th>
+							<th colspan="2">Opciones</th>
+						  </tr>
+						<?php foreach ($consulta as $Sql): ?>
+						<tr>
+							<?php echo "<td class='mayusculas'>". $Sql['idcitas']. "</td>"; ?>
+						<?php echo "<td class='mayusculas'>". $Sql['username']. "</td>"; ?>
+						<?php echo "<td class='mayusculas'>". $Sql['odontologianom']. "</td>"; ?>
+						<?php echo "<td class='mayusculas'>". $Sql['fecha']. "</td>"; ?>
+						<?php echo "<td class='mayusculas'>". $Sql['hora']. "</td>"; ?>
+						<?php echo "<td class='mayusculas'>". $Sql['observaciones']. "</td>"; ?>
+                        <?php echo "<td class='centrar'>"."<a href='actualizarcitas_vista.php?idcitas'=".$Sql['idcitas']."' class='editar'>Editar</a>". "</td>"; ?>
+						<?php echo "<td class='centrar'>"."<a href='deletecitas.php?idcitas'=".$Sql['idcitas']."' class='eliminar'>Eliminar</a>". "</td>"; ?>
+						</tr>
+						<?php endforeach; ?>
+						</table>
+						<?php  if(!empty($mensaje)): ?>
+							<ul>
+							  <?php echo $mensaje; ?>
+							</ul>
+						<?php  endif; ?>	 
+				</article>
+	</section>
+<?php include 'plantillas/footer.php'; ?>
+</body>
+</html>
