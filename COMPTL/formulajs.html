@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registrarse</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> <!-- libreria para que el codigo se vea bonito  -->
+	<link rel="stylesheet" type="text/css" href="../GRAFOS/estilos.css">
+	<link rel="icon" type="icon" href="../GRAFOS/imagenes/icono.png">
+
+</head>
+<body>
+
+
+<nav class="navbar">
+
+			<ul class="menu">
+				<li class="menu-item">
+					<a id="inicio" href="index.html" class="menu-link">Inicio</a>
+				</li>
+				<li class="menu-item">
+					<a href="#" class="menu-link">Nosotros</a>
+					<ul class="submenu">
+						<li class="submenu-item">
+							<a href="perfil.html" class="submenu-link">Perfil</a>
+						</li>
+						<li class="submenu-item">
+							<a href="mision.html" class="submenu-link">Mision</a>
+						</li>
+						<li class="submenu-item">
+							<a href="vision.html" class="submenu-link">Vision</a>
+						</li>
+					</ul>
+				</li>
+
+
+				<li class="menu-item">
+					<a href="" class="menu-link">Servicios</a>
+
+					<ul class="submenu">
+						<li class="submenu-item">
+							<a href="web.html" class="submenu-link">Desarrollo Web</a>
+						</li>
+						<li class="submenu-item">
+							<a href="android.html" class="submenu-link">Desarrollo Android</a>
+						</li>
+						
+					</ul>
+				</li>
+
+
+
+				<li class="menu-item">
+					<a id="contactenos" href="contactenos.html" class="menu-link">Contactenos</a>
+					
+				</li>
+
+				
+			</ul>
+
+		</nav>
+
+<section> <a style="color: red " href="index.html">Volver al Menu Principal</a></section>
+
+<article>
+					<div class="mensaje">
+						<h3>Registrese para ver mas informacion</h3>
+						
+					</div>
+
+					<form>
+					<label>Nombres</label>
+					<input type="text" id="Nombre" name="Nombre" placeholder="Ingrese Su Nombre:" required><br><br>
+					<label>Apellidos</label>
+					<input type="text" placeholder="Ingrese Su Apellido" name="Apellido" id="Apellido" required><br><br>
+					<label>Cedula</label>
+					<input type="number" placeholder="Cedula"  name="Cedula" id="Cedula" required><br><br>
+					<label>Edad</label>
+					<input type="number" placeholder="Edad" name="Edad" id="Edad" required ><br><br>
+					<label>Genero</label>
+						<fieldset id="Sexo" required>
+							Masculino<input type="radio" id="Masculino" name="Genero" value="1" checked> 
+							Femenino<input type="radio" id="Femenino" name="Genero" value="2" checked> 
+						</fieldset><br><br>
+			       
+
+					<label>Nivel Educativo</label>
+					<div>
+		            <select id="Nivel" name="Niveleducativo" required>
+		                <option id="Primaria" value="Primaria" cheked>Primaria</option>
+		                <option id="Bachillerato" value="Bachillerato" cheked > Bachillerato </option>
+		                <option id="Universidad" value="Universidad" cheked> Universidad</option>
+		            </select>
+		        	</div>
+
+					</select> <br><br>
+					<label>Fecha De Nacimiento</label>
+					<input type="date" value="" id="Fecha" name="Fecha" required><br><br>
+
+					<label>Correo Electronico</label>
+					<input type="email" id="Email" placeholder="Correo electronico" name="Correo" required>
+
+
+					<label>¿Le Gusto La Pagina?</label>
+						<fieldset id="Uso" required>
+							Si<input id="Si" type="checkbox"  name="uso" value="Si" >
+							No<input id="No" type="checkbox" name="uso" value="No"> 
+						</fieldset><br><br>
+
+					 <label>Sugerencias:</label><br>
+       				 <textarea id="Sugerencias" id="Sugerencias"
+                  	rows="3" cols="33" maxlength="200"
+                  	wrap="hard" name="textarea">
+        			</textarea>
+
+
+
+
+
+					<input  id="button_guardar"   type="submit" value="Guardar Datos" > 
+
+					
+</form>
+
+
+	<button type="submit" value="Mostrar Su Registro" name="Mostrar Datos Almacenados" onclick="Mostrar()">Mostrar Su Registro</button>  
+    <br>
+    
+				</article>
+<article>
+	<div class="mensaje">
+						<h3>Mostrar Informacion Guardada</h3>
+						
+					</div>
+
+
+	
+<table class="tabla">
+        <tr><!--  cabezera de la tabla -->
+            <th class="mayusculas">Nombre</th>
+            <th class="mayusculas">Apellidos</th>
+             <th scope="col">Cedula</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Nivel Educativo</th>
+            <th scope="col">Fecha Nacimiento</th>
+            
+            <th scope="col">Email</th>
+            <th scope="col">Le Gusto?</th>
+            <th scope="col">Sugerencia</th>
+            
+        </tr>
+
+        <tbody id="bodytable" ><!--  contenido tabla  -->
+
+        </tbody>
+
+    </table>
+    
+
+
+
+
+
+
+
+
+</article>
+
+
+    <script src="js/index.js"></script> <!-- enlace a javascript index.js  -->
+
+
+</body>
+</html>
